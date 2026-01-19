@@ -8,6 +8,8 @@ import AdminProducts from './pages/admin-view/products'
 import AuthLogin from './pages/auth/login'
 import AuthRegister from './pages/auth/register'
 import { Route, Routes } from 'react-router-dom'
+import ShoppingLayout from './pages/shopping-view/layout'
+import NotFound from './pages/not-found'
 
 function App() {
 
@@ -27,6 +29,12 @@ function App() {
           <Route path='orders' element={<AdminOrders/>}/>
           <Route path='features' element={<AdminFeatures/>}/>
         </Route>
+        <Route path='/shop' element={<ShoppingLayout/>}>
+          {/* <Route path=''/>
+          <Route path=''/> */}
+         
+        </Route>
+         <Route path='*' element={<NotFound/>}/>
       </Routes> 
     </div>
   )
