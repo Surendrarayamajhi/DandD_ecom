@@ -4,7 +4,7 @@ const User = require('../../models/User.js');
 
 
 //register
-const register = async(req, res) => {
+const registerUser = async(req, res) => {
     const {userName, email, password} = req.body;
 
     try{
@@ -52,3 +52,9 @@ const login = async(req, res) => {
 
 
 //auth-middleware
+
+
+
+
+
+module.exports = {registerUser};

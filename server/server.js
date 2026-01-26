@@ -2,6 +2,7 @@ const express  = require("express")
 const mongoose = require("mongoose")
 const cookieParser = require("cookie-parser")
 const cors =  require("cors")
+const authRouter = require('./routes/auth/auth-routes')
 
 // Here also create database  connection -> in direct connenct
 // create  seperate file for database connection  and import in this file to get connected
@@ -31,5 +32,6 @@ app.use(
 
 app.use(cookieParser());
 app.use(express.json());
+app.use('/api/auth', authRouter);
 
 app.listen(PORT, ()=> console.log(`Seever is runing on port ${PORT}`))
