@@ -18,7 +18,7 @@ const AuthRegister = () => {
   const navigate = useNavigate();
 
   function onSubmit(event) {
-    event.preventDefault();
+     event.preventDefault(); 
     dispatch(registerUser(formData)).then((data) => {
       if (data?.payload?.success) {
         toast({
@@ -33,7 +33,6 @@ const AuthRegister = () => {
       }
     });
   }
-  console.log(formData);
   return (
     <div className='mx-auto w-full max-w-md space-x-6'>
       <div className='text-center'>
@@ -53,4 +52,4 @@ const AuthRegister = () => {
   )
 }
 
-export default AuthRegister
+export default AuthRegister;
