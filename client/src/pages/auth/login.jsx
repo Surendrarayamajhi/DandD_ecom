@@ -22,14 +22,16 @@ const AuthLogin = () => {
 
     dispatch(loginUser(formData)).then((data) => {
       if (data?.payload?.success) {
-        toast({
-          title: data?.payload?.message,
-        });
+        // toast({
+        //   title: data?.payload?.message,
+        // });
+        alert("Login is successfully!")
       } else {
-        toast({
-          title: data?.payload?.message,
-          variant: "destructive",
-        });
+        // toast({
+        //   title: data?.payload?.message,
+        //   variant: "destructive",
+        // });
+        alert("Login is unsuccessfull! Please try again")
       }
     });
   }
