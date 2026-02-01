@@ -1,5 +1,5 @@
 import ProductImageUpload from "@/components/admin-view/image-upload";
-import AdminProductTile from "@/components/admin-view/product-tile";
+import AdminProductTile from "@/components/admin-view/product-title";
 import CommonForm from "@/components/common/form";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,7 +8,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { useToast } from "@/components/ui/use-toast";
+// import { useToast } from "@/components/ui/use-toast";
 import { addProductFormElements } from "@/config";
 import {
   addNewProduct,
@@ -42,7 +42,7 @@ function AdminProducts() {
 
   const { productList } = useSelector((state) => state.adminProducts);
   const dispatch = useDispatch();
-  const { toast } = useToast();
+  // const { toast } = useToast();
 
   function onSubmit(event) {
     event.preventDefault();
@@ -74,9 +74,10 @@ function AdminProducts() {
             setOpenCreateProductsDialog(false);
             setImageFile(null);
             setFormData(initialFormData);
-            toast({
-              title: "Product add successfully",
-            });
+            // toast({
+            //   title: "Product add successfully",
+            // });
+            alert("Product add successfully")
           }
         });
   }
