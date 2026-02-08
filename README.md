@@ -178,3 +178,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 -   [Firebase](https://firebase.google.com/)
 -   [Cloudinary](https://cloudinary.com/)
 -   [Stripe](https://stripe.com/)
+-   [Shadcn](https://ui.shadcn.com/)
+-   [Tailwindcss](https://tailwindcss.com/)
