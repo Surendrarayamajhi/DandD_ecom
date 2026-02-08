@@ -18,9 +18,10 @@ export const addNewProduct = createAsyncThunk(
         },
       }
     );
-
+console.log(productForm.image);
     return result?.data;
   }
+  
 );
 
 export const fetchAllProducts = createAsyncThunk(

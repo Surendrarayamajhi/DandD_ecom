@@ -23,7 +23,7 @@ function ProductImageUpload({
   function handleImageFileChange(event) {
     console.log(event.target.files, "event.target.files");
     const selectedFile = event.target.files?.[0];
-    console.log(selectedFile);
+    // console.log(selectedFile);
 
     if (selectedFile) setImageFile(selectedFile);
   }
@@ -86,8 +86,7 @@ function ProductImageUpload({
           disabled={isEditMode}
         />
         {!imageFile ? (
-          <Label
-            htmlFor="image-upload"
+          <Label htmlFor="image-upload"
             className={`${
               isEditMode ? "cursor-not-allowed" : ""
             } flex flex-col items-center justify-center h-32 cursor-pointer`}
@@ -109,7 +108,7 @@ function ProductImageUpload({
               className="text-muted-foreground hover:text-foreground"
               onClick={handleRemoveImage}
             >
-              <XIcon className="w-4 h-4" />
+              <XIcon className="w-4 h-4"/>
               <span className="sr-only">Remove File</span>
             </Button>
           </div>
